@@ -20,6 +20,10 @@ export function GoalProvider({ children }) {
     await goalService.deleteGoal(id);
     fetchGoals();
   };
+//  const editGoal = async (id) => {
+//     await goalService.editGoal(id);
+//     fetchGoals();
+//   };
 
   useEffect(() => {
     fetchGoals();

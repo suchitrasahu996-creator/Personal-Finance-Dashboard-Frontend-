@@ -31,9 +31,12 @@ export default function Login() {
 );  
 
       
-
+      if(response.data.success){
+      console.log("RESPONSE",response)
+      localStorage.setItem("userInfo", JSON.stringify(response.data.data.user))
       localStorage.setItem("token", response.data.data.token);
       navigate("/dashboard");
+    }
     } catch (err) {
       console.error(err);
       setError(err.response?.data?.message || "Invalid email or password");

@@ -47,7 +47,10 @@ export default function Sidebar({ activeModule, setActiveModule }) {
       </div>
       <div className="bottom-0" >
       <button
-        onClick={() => navigate("/login")}
+        onClick={() =>{
+          localStorage.clear();
+          navigate("/login")
+        }}
         className=" flex items-center gap-3 w-full px-4 py-3 bg-blue-700 rounded-lg hover:bg-blue-800 transition"
       >
         <LogOut size={20} />

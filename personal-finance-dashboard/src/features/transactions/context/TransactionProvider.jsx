@@ -11,7 +11,7 @@ export function TransactionProvider({ children }) {
 
     const formatted = data.map((t) => ({
       id: t.id,
-      title: t.title,
+      title: t.description,
       amount: Number(t.amount),
       type: t.type,
       category: t.category,
@@ -41,7 +41,7 @@ export function TransactionProvider({ children }) {
         transactions,
         fetchTransactions,
         addTransaction,
-        removeTransaction,
+        removeTransaction
       }}
     >
       {children}

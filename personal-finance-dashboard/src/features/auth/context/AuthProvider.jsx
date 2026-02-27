@@ -26,12 +26,12 @@ export function AuthProvider({ children }) {
 
     setToken(res.token);
 
-    setUser(res.user);
+    setUser(JSON.stringify(res.user));
   };
 
   const login = async (credentials) => {
     const res = await authService.login(credentials);
-
+    console.log("")
     localStorage.setItem("token", res.token);
 
     setToken(res.token);
